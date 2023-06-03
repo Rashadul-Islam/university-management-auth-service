@@ -14,6 +14,11 @@
             "date": 1685774135914,
             "name": "C:\\Users\\Rashadul Islam\\Desktop\\university-management-auth-service\\logs\\winston\\errors\\um-2023-03-06-12-error.log",
             "hash": "c25f8845bc9b82fcc7f1602471e898f3f03bff109698361c52e00db53b81706d"
+        },
+        {
+            "date": 1685776295335,
+            "name": "C:\\Users\\Rashadul Islam\\Desktop\\university-management-auth-service\\logs\\winston\\errors\\um-2023-03-06-13-error.log",
+            "hash": "66fd4e3affc8c2ef94b036ddcb750b18c647664acda9d659b9bd2a698eacc78b"
         }
     ],
     "hashType": "sha256"
