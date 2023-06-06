@@ -1,6 +1,7 @@
 import { ZodError } from 'zod';
 import { IGenericErrorResponse } from '../interfaces/common';
 import { IGenericErrorMessage } from '../interfaces/error';
+import httpStatus from 'http-status';
 
 const handleZodError = (error: ZodError): IGenericErrorResponse => {
   const errors: IGenericErrorMessage[] = error.issues.map(issue => {
@@ -10,7 +11,7 @@ const handleZodError = (error: ZodError): IGenericErrorResponse => {
     };
   });
 
-  const statusCode = 400;
+  const statusCode = httpStatus.BAD_REQUEST;
 
   return {
     statusCode,
