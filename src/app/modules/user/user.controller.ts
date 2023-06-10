@@ -7,7 +7,6 @@ import sendResponse from '../../../shared/sendResponse';
 const createUser: RequestHandler = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const result = await UserService.createUser(req.body);
-    next();
 
     sendResponse(res, {
       statusCode: httpStatus.CREATED,
@@ -15,6 +14,7 @@ const createUser: RequestHandler = catchAsync(
       message: 'user created successfully!',
       data: result,
     });
+    next();
   }
 );
 
