@@ -1,4 +1,3 @@
-import { number } from 'zod';
 import { IGenericErrorMessage } from './error';
 
 export type IGenericErrorResponse = {
