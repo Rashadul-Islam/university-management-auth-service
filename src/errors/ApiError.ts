@@ -1,4 +1,4 @@
-class APiError extends Error {
+class ApiError extends Error {
   statusCode: number;
 
   constructor(statusCode: number, message: string | undefined, stack = '') {
@@ -12,4 +12,4 @@ class APiError extends Error {
   }
 }
 
-export default APiError;
+export default ApiError;
