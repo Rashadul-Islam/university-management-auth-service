@@ -92,7 +92,7 @@ const createFaculty = async (
   // set role
   user.role = 'faculty';
 
-  // generate student id
+  // generate faculty id
   let newUserAllData = null;
   const session = await mongoose.startSession();
   try {
@@ -105,11 +105,11 @@ const createFaculty = async (
     const newFaculty = await Faculty.create([faculty], { session });
 
     if (!newFaculty.length) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create student');
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create faculty');
     }
 
-    //set student -->  _id into user.student
-    user.student = newFaculty[0]._id;
+    //set faculty -->  _id into user.faculty
+    user.faculty = newFaculty[0]._id;
 
     const newUser = await User.create([user], { session });
 
