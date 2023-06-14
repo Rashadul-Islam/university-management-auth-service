@@ -17,4 +17,4 @@ router.patch(
   FacultyController.updateFaculty
 );
 
-export const StudentsRoutes = router;
+export const FacultyRoutes = router;

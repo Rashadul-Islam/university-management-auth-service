@@ -111,7 +111,7 @@ const deleteFaculty = async (id: string): Promise<IFaculty | null> => {
     const user = await User.findOneAndDelete({ id: faculty.id }, { session });
 
     if (!user) {
-      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create user');
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to delete user');
     }
     deletedData = faculty;
 
