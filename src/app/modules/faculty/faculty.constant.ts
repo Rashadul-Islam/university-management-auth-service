@@ -1,8 +1,8 @@
 export const facultySearchableFields = [
-  'id',
   'email',
   'contactNo',
-  'name.fisrtName',
+  'emergencyContactNo',
+  'name.firstName',
   'name.middleName',
   'name.lastName',
 ];
@@ -14,4 +14,5 @@ export const facultyFilterableFields = [
   'email',
   'contactNo',
   'emergencyContactNo',
+  'designation',
 ];
