@@ -13,12 +13,6 @@ router.post(
 );
 
 router.post(
-  '/refresh-token',
-  validateRequest(AuthValidation.refreshTokenZodSchema),
-  AuthController.refreshToken
-);
-
-router.post(
   '/change-password',
   validateRequest(AuthValidation.changePasswordZodSchema),
   auth(
@@ -28,6 +22,12 @@ router.post(
     ENUM_USER_ROLE.STUDENT
   ),
   AuthController.changePassword
+);
+
+router.post(
+  '/refresh-token',
+  validateRequest(AuthValidation.refreshTokenZodSchema),
+  AuthController.refreshToken
 );
 
 export const AuthRoutes = router;
